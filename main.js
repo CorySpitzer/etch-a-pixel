@@ -1,9 +1,25 @@
-for (let i = 0; i < 16; i++) {
+let dimension = 3;
+for (let i = 0; i < dimension; i++) {
+    // make row 
+    let row = document.createElement('div');
+    row.id = 'row' + i;
+    let rowContent = document.createTextNode('');
+    row.appendChild(rowContent);
+    //create a break 
+    let br = document.createElement('p');
+    let brContent = document.createTextNode('');
+    br.appendChild(brContent);
 
-    const square = document.createElement('div');
-    square.classList.add('pixel');
-    const divContent = document.createTextNode('');
-    square.appendChild(divContent);
-    const parentDiv = document.getElementById('board');
-    parentDiv.appendChild(square);
-}
+    let parentDiv = document.getElementById('board');
+    parentDiv.appendChild(row);
+
+    for (let j = 0; j < dimension; j++) {   
+        let square = document.createElement('div');
+        square.classList.add('pixel');
+        let divContent = document.createTextNode('');
+        square.appendChild(divContent);
+
+        let parentDiv = document.getElementById('row' + i);
+        parentDiv.appendChild(square);
+    }
+}    
