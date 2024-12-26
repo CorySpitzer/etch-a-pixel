@@ -25,3 +25,13 @@ for (let i = 0; i < dimension; i++) {
         parentDiv.appendChild(square);
     }
 }    
+
+function reset() {
+    for (let i = 0; i < dimension; i++) {
+        let row = document.getElementById('row' + i);
+        row.remove();
+    }
+}
+
+const resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', () => reset());
