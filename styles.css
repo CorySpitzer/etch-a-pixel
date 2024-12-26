@@ -1,12 +1,15 @@
 .pixel {
     border-color: black; 
-    border-width: 3px;
-    border-style: solid;
-    width: 75px;
-    height: 75px;
+    border-width: 1px;
+    border-style: dotted;
+    width: 15px;
+    height: 15px;
+    aspect-ratio: 1/1;
 }
 
 .container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }

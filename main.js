@@ -1,4 +1,4 @@
-let dimension = 3;
+let dimension = 25;
 for (let i = 0; i < dimension; i++) {
     // make row 
     let row = document.createElement('div');
