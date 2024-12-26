@@ -1,9 +1,9 @@
 .pixel {
-    border-color: black; 
+    border-color: lightgray; 
     border-width: 1px;
     border-style: dotted;
-    width: 15px;
-    height: 15px;
+    width: 7px;
+    height: 7px;
     aspect-ratio: 1/1;
 }
 
