@@ -17,7 +17,7 @@ function makeBoard(dimension) {
             let square = document.createElement('div');
             square.classList.add('pixel');
             square.addEventListener('mouseover', () => {
-                square.style.backgroundColor = 'black'});
+                square.style.backgroundColor = penColor});
             let divContent = document.createTextNode('');
             square.appendChild(divContent);
 
@@ -36,8 +36,50 @@ function reset(dimension) {
     }
     makeBoard(dimension);
 }
+
 let dimension = 100;
+penColor = 'black';
 makeBoard(dimension);
 
 const resetButton = document.getElementById('reset');
 resetButton.addEventListener('click', () => reset(dimension));
+
+const redButton = document.getElementById('red');
+redButton.addEventListener('click', () => { 
+    penColor = 'red';
+});
+
+const blueButton = document.getElementById('blue');
+blueButton.addEventListener('click', () => { 
+    penColor = 'blue';
+});
+
+const yellowButton = document.getElementById('yellow');
+yellowButton.addEventListener('click', () => { 
+    penColor = 'yellow';
+});
+
+const purpleButton = document.getElementById('purple');
+purpleButton.addEventListener('click', () => { 
+    penColor = 'purple';
+});
+
+const greenButton = document.getElementById('green');
+greenButton.addEventListener('click', () => { 
+    penColor = 'green';
+});
+
+const orangeButton = document.getElementById('orange');
+orangeButton.addEventListener('click', () => { 
+    penColor = 'orange';
+});
+
+const blackButton = document.getElementById('black');
+blackButton.addEventListener('click', () => { 
+    penColor = 'black';
+});
+
+const pinkButton = document.getElementById('pink');
+pinkButton.addEventListener('click', () => { 
+    penColor = 'pink';
+});
