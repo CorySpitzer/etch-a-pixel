@@ -16,6 +16,8 @@ for (let i = 0; i < dimension; i++) {
     for (let j = 0; j < dimension; j++) {   
         let square = document.createElement('div');
         square.classList.add('pixel');
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = 'black'});
         let divContent = document.createTextNode('');
         square.appendChild(divContent);
 
