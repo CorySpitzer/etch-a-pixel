@@ -1,37 +1,43 @@
-let dimension = 100;
-for (let i = 0; i < dimension; i++) {
-    // make row 
-    let row = document.createElement('div');
-    row.id = 'row' + i;
-    let rowContent = document.createTextNode('');
-    row.appendChild(rowContent);
-    //create a break 
-    let br = document.createElement('p');
-    let brContent = document.createTextNode('');
-    br.appendChild(brContent);
-
-    let parentDiv = document.getElementById('board');
-    parentDiv.appendChild(row);
-
-    for (let j = 0; j < dimension; j++) {   
-        let square = document.createElement('div');
-        square.classList.add('pixel');
-        square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = 'black'});
-        let divContent = document.createTextNode('');
-        square.appendChild(divContent);
-
-        let parentDiv = document.getElementById('row' + i);
-        parentDiv.appendChild(square);
-    }
-}    
-
-function reset() {
+function makeBoard(dimension) {
     for (let i = 0; i < dimension; i++) {
-        let row = document.getElementById('row' + i);
-        row.remove();
-    }
+        // make row 
+        let row = document.createElement('div');
+        row.id = 'row' + i;
+        let rowContent = document.createTextNode('');
+        row.appendChild(rowContent);
+        //create a break 
+        let br = document.createElement('p');
+        let brContent = document.createTextNode('');
+        br.appendChild(brContent);
+
+        let parentDiv = document.getElementById('board');
+        parentDiv.appendChild(row);
+
+        for (let j = 0; j < dimension; j++) {   
+            let square = document.createElement('div');
+            square.classList.add('pixel');
+            square.addEventListener('mouseover', () => {
+                square.style.backgroundColor = 'black'});
+            let divContent = document.createTextNode('');
+            square.appendChild(divContent);
+
+            let parentDiv = document.getElementById('row' + i);
+            parentDiv.appendChild(square);
+        }
+    }    
 }
 
+function reset(dimension) {
+    for (let i = 0; i < dimension; i++) {
+        let row = document.getElementById('row' + i);
+        if (row != null) {
+            row.remove();
+        }
+    }
+    makeBoard(dimension);
+}
+let dimension = 100;
+makeBoard(dimension);
+
 const resetButton = document.getElementById('reset');
-resetButton.addEventListener('click', () => reset());
+resetButton.addEventListener('click', () => reset(dimension));
