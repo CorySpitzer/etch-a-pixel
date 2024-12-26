@@ -37,7 +37,7 @@ function reset(dimension) {
     makeBoard(dimension);
 }
 
-let dimension = 100;
+let dimension = 150;
 penColor = 'black';
 makeBoard(dimension);
 

@@ -2,8 +2,8 @@
     border-color: lightgray; 
     border-width: 1px;
     border-style: dotted;
-    width: 7px;
-    height: 7px;
+    width: 4px;
+    height: 4px;
     aspect-ratio: 1/1;
 }
 
@@ -12,6 +12,12 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+}
+
+#description {
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 #red {
